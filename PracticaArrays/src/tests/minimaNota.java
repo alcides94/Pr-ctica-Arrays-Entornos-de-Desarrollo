@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import util.MisArrays;
 
-class maximaNota {
+class minimaNota {
 
 	static int [] numeros1;
 	static int [] numeros2;
@@ -17,28 +17,28 @@ class maximaNota {
 	static void setup() {
 		numeros1= new int[] {1,2,3,4,5};		
 		numeros2= new int[] {-1,2,3,4,5};
-		numeros3= new int[] {1,9,3,4,5,8};
+		numeros3= new int[] {6,9,3,4,5,8};
 	}	
 	
 		
 	@Test
 	void testValido() {
-		int maximaEsperada=5;
-		int maximaObtenida=MisArrays.maximaNota(numeros1);
-		assertEquals(maximaEsperada, maximaObtenida);
+		int minimaEsperada=1;
+		int minimaObtenida=MisArrays.minimaNota(numeros1);
+		assertEquals(minimaEsperada, minimaObtenida);
 	}
 	
 	@Test
 	void testValidoPar() {
-		int maximaEsperada=9;
-		int maximaObtenida=MisArrays.maximaNota(numeros3);
-		assertEquals(maximaEsperada, maximaObtenida);
+		int minimaEsperada=3;
+		int minimaObtenida=MisArrays.minimaNota(numeros3);
+		assertEquals(minimaEsperada, minimaObtenida);
 	}
 	
 	@Test
 	void testException2() {
 		Exception excepcion = assertThrows(IllegalArgumentException.class,
-				()->MisArrays.maximaNota(numeros2));
+				()->MisArrays.minimaNota(numeros2));
 
 		String esperado ="Las notas deben estar entre 0 y 10";
 		String obtenido =excepcion.getMessage();
