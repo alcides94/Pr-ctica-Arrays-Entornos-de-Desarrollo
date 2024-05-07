@@ -5,15 +5,15 @@ import java.util.*;
 public class MisArrays {
 	
 	/**
-	 * Devuelve la media de las notas
+	 * devuelve en un float la media con decimales de dicho array.
 	 * 
-	 * @param numeros	recibe como parametro un array con las notas
+	 * @param numeros	Recibe un array de números enteros entre 0 y 10
 	 * @return			retorna el valor de la media
 	 * @throws IllegalArgumentException devuelve una excepcion si el parametro enviado es menor a 0 o mayor a 10
 	 * 
 	 */
 	
-	public float mediaNotas(int [] numeros) {
+	public static float mediaNotas(int [] numeros) {
 		int suma=0;
 		float media=0;
 		
@@ -35,13 +35,13 @@ public class MisArrays {
 	/**
 	 *  devuelve en un float la mediana con decimales de dicho array.
 	 * 
-	 * @param numeros	recibe como para emtro un array
+	 * @param numeros	Recibe un array de números enteros entre 0 y 10
 	 * @return			devuelve la mediana del parametro recibido
 	 * @throws IllegalArgumentException devuelve una excepcion si el parametro enviado es menor a 0 o mayor a 10
 	 * 
 	 */
 	
-	public float medianaNotas(int [] numeros) {
+	public static float medianaNotas(int [] numeros) {
 		float mediana=0;
 		
 		for (int i=0; i<numeros.length;i++) {
@@ -49,8 +49,7 @@ public class MisArrays {
 			if (numeros[i]>10&&numeros[i]<0) {
 				throw new IllegalArgumentException ("Las notas deben estar entre 0 y 10");
 				
-			}
-			
+			}	
 			
 		} 
 		
@@ -66,12 +65,34 @@ public class MisArrays {
 			mediana=numeros[cantidad/2];
 		}
 		
-		
-		
 		return mediana;
 	}
 	
+	/**
+	 * devuelve en un entero el valor máximo de dicho array
+	 * 
+	 * @param numeros	Recibe un array de números enteros entre 0 y 10
+	 * @return
+	 * @throws IllegalArgumentException devuelve una excepcion si el parametro enviado es menor a 0 o mayor a 10
+	 * 
+	 */
 	
+	public static int maximaNota(int [] numeros) {
+		int maxima=numeros[0];
+		for (int i=0; i<numeros.length;i++) {
+					
+			if (numeros[i]>10&&numeros[i]<0) {
+				throw new IllegalArgumentException ("Las notas deben estar entre 0 y 10");	
+			}	
+			
+			if (numeros[i]>maxima) {
+				
+				maxima=numeros[i];
+			}
+		} 
+		
+		return maxima;
+	}
 	
 	
 }
