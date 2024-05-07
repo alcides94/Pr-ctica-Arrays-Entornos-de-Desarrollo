@@ -30,20 +30,20 @@ class medianasNota {
 	}
 	
 	@Test
-	void testValido2() {
+	void testValidoPar() {
 		float medianaEsperada=3.5f;
 		float medianaObtenida=MisArrays.medianaNotas(numeros3);
 		assertEquals(medianaEsperada, medianaObtenida);
 	}
-	/*
+	
 	@Test
 	void testException2() {
 		Exception excepcion = assertThrows(IllegalArgumentException.class,
-				()->MisArrays.medianaNotas(numeros3));
+				()->MisArrays.medianaNotas(numeros2));
 
 		String esperado ="Las notas deben estar entre 0 y 10";
 		String obtenido =excepcion.getMessage();
 		assertEquals(esperado,obtenido);
 	}
-*/
+
 }
