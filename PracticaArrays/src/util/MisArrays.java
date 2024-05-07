@@ -8,7 +8,7 @@ public class MisArrays {
 	 * devuelve en un float la media con decimales de dicho array.
 	 * 
 	 * @param numeros	Recibe un array de números enteros entre 0 y 10
-	 * @return			retorna el valor de la media
+	 * @return			devuelve en un float la media con decimales de dicho array
 	 * @throws IllegalArgumentException devuelve una excepcion si el parametro enviado es menor a 0 o mayor a 10
 	 * 
 	 */
@@ -36,7 +36,7 @@ public class MisArrays {
 	 *  devuelve en un float la mediana con decimales de dicho array.
 	 * 
 	 * @param numeros	Recibe un array de números enteros entre 0 y 10
-	 * @return			devuelve la mediana del parametro recibido
+	 * @return			devuelve en un float la mediana con decimales de dicho array.
 	 * @throws IllegalArgumentException devuelve una excepcion si el parametro enviado es menor a 0 o mayor a 10
 	 * 
 	 */
@@ -72,7 +72,7 @@ public class MisArrays {
 	 * devuelve en un entero el valor máximo de dicho array
 	 * 
 	 * @param numeros	Recibe un array de números enteros entre 0 y 10
-	 * @return
+	 * @return			devuelve en un entero el valor máximo de dicho array.
 	 * @throws IllegalArgumentException devuelve una excepcion si el parametro enviado es menor a 0 o mayor a 10
 	 * 
 	 */
@@ -92,6 +92,32 @@ public class MisArrays {
 		} 
 		
 		return maxima;
+	}
+	
+	/**
+	 *  devuelve en un entero el valor mínimo de dicho array.
+	 * 
+	 * @param numeros	Recibe un array de números enteros entre 0 y 10
+	 * @return			devuelve en un entero el valor mínimo de dicho array.
+	 * @throws IllegalArgumentException devuelve una excepcion si el parametro enviado es menor a 0 o mayor a 10
+	 * 
+	 */
+	public static int minimaNota(int [] numeros) {
+		int minima=numeros[0];
+		for (int i=0; i<numeros.length;i++) {
+					
+			if ((numeros[i]>10)&&(numeros[i]<0)) {
+				throw new IllegalArgumentException ("Las notas deben estar entre 0 y 10");	
+			}	
+			
+			if (numeros[i]<minima) {
+				
+				minima=numeros[i];
+			}
+		} 
+		
+		return minima;
+		
 	}
 	
 	
