@@ -1,7 +1,7 @@
 package util;
 
+import java.util.Arrays;
 
-import java.util.*;
 public class MisArrays {
 	
 	/**
@@ -19,7 +19,7 @@ public class MisArrays {
 		
 		
 			for (int i=0; i<numeros.length;i++) {
-				if (numeros[i]>10&&numeros[i]<0) {
+				if (numeros[i]>10||numeros[i]<0) {
 					throw new IllegalArgumentException ("Las notas deben estar entre 0 y 10");
 					
 				}
@@ -46,7 +46,7 @@ public class MisArrays {
 		
 		for (int i=0; i<numeros.length;i++) {
 			
-			if (numeros[i]>10&&numeros[i]<0) {
+			if (numeros[i]>10||numeros[i]<0) {
 				throw new IllegalArgumentException ("Las notas deben estar entre 0 y 10");
 				
 			}	
@@ -81,7 +81,7 @@ public class MisArrays {
 		int maxima=numeros[0];
 		for (int i=0; i<numeros.length;i++) {
 					
-			if (numeros[i]>10&&numeros[i]<0) {
+			if (numeros[i]>10||numeros[i]<0) {
 				throw new IllegalArgumentException ("Las notas deben estar entre 0 y 10");	
 			}	
 			
@@ -106,7 +106,7 @@ public class MisArrays {
 		int minima=numeros[0];
 		for (int i=0; i<numeros.length;i++) {
 					
-			if ((numeros[i]>10)&&(numeros[i]<0)) {
+			if ((numeros[i]>10)||(numeros[i]<0)) {
 				throw new IllegalArgumentException ("Las notas deben estar entre 0 y 10");	
 			}	
 			
